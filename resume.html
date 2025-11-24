@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Resume</title>
+    <style>
+        /* --- CSS VARIABLES --- */
+        :root {
+            --primary-color: #1c72c9;   /* Dark Blue/Grey */
+            --accent-color: aqua;    /* Light Blue */
+            --text-color: #333333;      /* Dark Grey */
+            --bg-color: #f4f4f4;        /* Light Grey Background */
+            --container-bg: #ffffff;    /* White Paper */
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* --- GLOBAL RESET --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* --- PAGE CONTAINER (A4 Size Approx) --- */
+        .resume-container {
+            background-color: var(--container-bg);
+            width: 100%;
+            max-width: 800px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            display: grid;
+            grid-template-columns: 1fr; /* Mobile first: single column */
+            
+        }
+        .resume-container img{
+            height: 100px;
+            width: 100px;
+            position:relative;
+            left: 0;
+            
+        }
+
+        /* --- HEADER SECTION --- */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        header .role {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+
+        header .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            font-size: 0.9rem;
+        }
+
+        /* --- LAYOUT: SIDEBAR & MAIN --- */
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 2fr; /* Sidebar 1/3, Main 2/3 */
+        }
+
+        /* --- SIDEBAR (Left) --- */
+        aside {
+            background-color: #f9f9f9;
+            padding: 30px 20px;
+            border-right: 1px solid #eee;
+        }
+
+        /* --- MAIN CONTENT (Right) --- */
+        main {
+            padding: 30px;
+        }
+
+        /* --- COMMON SECTION STYLES --- */
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            color: #000;
+            margin-bottom: 2px;
+        }
+
+        .sub-title {
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        p, li {
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+        }
+
+        ul {
+            list-style-position: inside;
+            margin-left: 5px;
+        }
+
+        /* --- SKILLS TAGS --- */
+        .skill-tag {
+            display: inline-block;
+            background: #e1e8ef;
+            color: var(--primary-color);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin: 0 5px 5px 0;
+        }
+
+        /* --- RESPONSIVE DESIGN (Mobile) --- */
+        @media (max-width: 600px) {
+            .content-wrapper {
+                grid-template-columns: 1fr; /* Stack sidebar and main */
+            }
+            aside {
+                border-right: none;
+                border-bottom: 1px solid #eee;
+            }
+        }
+
+        /* --- PRINT STYLES --- */
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+            .resume-container {
+                box-shadow: none;
+                width: 100%;
+                max-width: 100%;
+            }
+            /* Ensure background colors print */
+            header {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="resume-container">
+        <header>
+            <img align="left" src="profile photo.jpg" alt="profile photo">
+            <h1>Rohit Goswami</h1>
+            <div class="role">Fresher Student</div>
+            <div class="contact-info">
+                <span>rohitgoswami9410@gmail.com</span> |
+                <span>+91-9410940385</span> |
+                <span>linkedin.com/in/RohitGoswami</span> |
+                <span>New delhi , INDIA</span>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <aside>
+                <section>
+                    <h2>Education</h2>
+                    <h3>ABES ENGINEERING COLLEGE</h3>
+                    <div><h2>Affilated with AKTU</h2></div>
+                    
+                    <br>
+
+                </div>
+                </section>
+
+                <section>
+                    <h2>Core Skills</h2>
+                    <span class="skill-tag">JAVA</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">HTML & CSS</span>
+                    <span class="skill-tag">Data MANAGEMENT</span>
+                    <span class="skill-tag">C++ </span>
+                    <span class="skill-tag">Strategic Planning</span>
+                </section>
+
+                    <section>
+                    <h2>  Certifications</h2>
+                    <ul>
+                        <li>ABESEC CERTIFIED</li>
+                        <li>WEB DEVELOPMENT</li>
+                    </ul>
+                    </section>
+            </aside>
+
+            <main>
+                <section>
+                    <h2>Professional Profile</h2>
+                    <p>Results-oriented professional with 7+ years of experience managing complex projects. Proven track record of improving efficiency and reducing costs. Adept at leading cross-functional teams to deliver projects on time and within budget.</p>
+                </section>
+
+                <section>
+                    <h2>Work Experience</h2>
+                    
+                    <div class="job">
+                        <h3>TEAM LEADER </h3>
+                        <div class="sub-title">Tech Solutions Inc. | 2025 - Present</div>
+                        <ul>
+                            <li>Led a team of 15 studenrs and designers to launch a new product.</li>
+                            <li>Implemented New Technology reducing project delivery time by 20%.</li>
+                            <li>Managed client relationships and stakeholder expectations for Fortune upto 500 accounts.</li>
+                        </ul>
+                    </div>
+
+                    <br>
+
+                    <div class="job">
+                        <h3>Project Coordinator</h3>
+                        <div class="sub-title">Creative Agency LLC | 2016 - 2020</div>
+                        <ul>
+                            <li>Coordinated With Various Different Types Of People.</li>
+                            <li>Managed a team with zero money waste.</li>
+                            <li>Facilitated communication between creative teams and clients.</li>
+                        </ul>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>
