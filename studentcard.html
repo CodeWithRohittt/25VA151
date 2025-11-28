@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile Card</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+
+            /* Center everything using Flexbox */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f0f0f0;
+        }
+
+        .profile-card {
+            background: white;
+            width: 300px;
+            padding: 50px;
+            border-radius: 40px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+
+            /* Centering content inside card */
+            display: flex;
+            flex-direction: column;         /* Vertical layout */
+            justify-content: center;         /* Vertical alignment */
+            align-items: center;             /* Horizontal alignment */
+            text-align: center;
+        }
+
+        .profile-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 40%;
+            margin-bottom: 15px;
+        }
+
+        .profile-card h2 {
+            margin: 5px 0;
+        }
+
+        .profile-card p {
+            color: #555;
+            margin: 3px 0;
+        }
+
+        .btn {
+            margin-top: 15px;
+            padding: 8px 15px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-card">
+        <img src="image.jpeg" alt="Student Photo">
+
+        <h2>Rohit Goswami</h2>
+        <p><strong>Roll No:</strong> 2025B15310210</p>
+        <p><strong>Course:</strong> B.Tech (AIML)</p>
+        <p><strong>Year:</strong> 1st Year</p>
+
+        <button class="btn">View Details</button>
+    </div>
+
+</body>
+</html>
